@@ -53,7 +53,7 @@ export default function ViewStationList() {
   <table className="table table-condensed">
     <thead>
       <tr >
-        <th>#</th>
+        <th>Index</th>
         <th>Name</th>
         <th>Price</th>
         <th>Address</th>
