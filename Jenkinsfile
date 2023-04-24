@@ -35,11 +35,6 @@ pipeline {
             }
             }
              
-      stage('npm start') {
-            steps {
-               
-                 sh "npm start"
-            }  
-        }
+      
     }
 }
