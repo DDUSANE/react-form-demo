@@ -12,6 +12,19 @@ pipeline {
                 git( url: 'https://github.com/DDUSANE/react-form-demo.git', credentialsId: 'id-rsa1', branch: "master" )
             }
         }
+         stage('npm install') {
+            steps {
+               
+                 sh "npm install"
+            }  
+        }
+        stage('npm buid') {
+            steps {
+               
+                 sh "npm run build"
+            }  
+        }
+       
             stage('sonar-scan') {
             steps {
                
@@ -21,12 +34,7 @@ pipeline {
                  
             }
             }
-             stage('npm buid') {
-            steps {
-               
-                 sh "npm run build"
-            }  
-        }
+             
       stage('npm start') {
             steps {
                
