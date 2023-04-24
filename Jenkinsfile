@@ -16,7 +16,7 @@ pipeline {
             steps {
                
                withSonarQubeEnv('SonarQube') {
-                         sh "npm dscan"
+                         sh "npm run dscan"
                     } 
                  
             }
