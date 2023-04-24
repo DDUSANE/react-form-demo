@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         
-       tool name: 'Node', type: 'nodejs'
+       node "nodejs"
     }
 
     stages {
