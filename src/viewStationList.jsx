@@ -2,11 +2,12 @@ import axios from "axios";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import { useState,useEffect } from "react";
+import React,{ useState,useEffect } from "react";
 
 export default function ViewStationList() {
    
     let [stations, setStations] = useState([]);
+    // eslint-disable-next-line
     const [station,setStation] =useState("");
 
     
@@ -74,7 +75,7 @@ export default function ViewStationList() {
         <td>{station.stationName}</td>
         <td>{station.stationPricing}</td>
         <td>{station.stationAddress}</td>
-        <td><img className="App-logo" src={station.stationImage}/></td>
+        <td><img className="App-logo" src={station.stationImage} alt={station.stationName}/></td>
         <td><button className="btn btn-success" onClick={() => editStation(station.stationId)}>Edit</button></td>
         <td><button className="btn btn-success" onClick={() => deleteStation(station.stationId)}>Delete</button></td>
         

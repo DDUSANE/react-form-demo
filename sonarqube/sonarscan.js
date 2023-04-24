@@ -4,7 +4,7 @@ const scanner = require('sonarqube-scanner')
 scanner(
     {
         serverUrl: 'http://localhost:9000',
-        token: "sqp_cb47875779452e50b5c2edbd33d92797c56d9f3f",
+        token: "sqa_a49d4cb095d040fcf138ff32db3c64df9ef03d89",
         options: {
             'sonar.projectKey': 'evs-react-project1',
             'sonar.projectName': 'evs-react-project1',

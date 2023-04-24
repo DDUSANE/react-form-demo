@@ -1,13 +1,14 @@
-import { Component } from "react";
-import { useState } from "react";
+
+import React , {useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from "axios";
 
- export default function ChargingStations ()
+  function ChargingStations ()
 {
-
+// eslint-disable-next-line
     const [stationId,setStationId] = useState("");
     const [stationName,setStationName] = useState("");
+    // eslint-disable-next-line
     const [stationImage,setStationImage] = useState("");
     const [stationPricing,setStationPricing] = useState("");
     const [stationAddress,setStationAddress] = useState("");
@@ -15,11 +16,7 @@ import axios from "axios";
 
     
     const sendToApi = (event) =>{
-        // station_id
-        // station_name
-        // station_image
-        // station_pricing
-        // station_address
+       
     event.preventDefault();
     axios({  
         url: "http://localhost:8090/add",  
@@ -48,7 +45,7 @@ import axios from "axios";
                 
                 <td > <input className="form-control" type="text" placeholder="Price" value={stationPricing} onChange={(e)=>(setStationPricing(e.target.value))} required/>
        </td>
-       <td ><img className="form-control"  src={stationImage}  />
+       <td ><img className="form-control"  src={stationImage}  alt={stationName} />
         </td>
         <td > <input className="form-control" type="text" placeholder="Address" value={stationAddress} onChange={(e)=>(setStationAddress(e.target.value))} required/>
        </td>
@@ -68,4 +65,4 @@ import axios from "axios";
     );
 
 }
-
+export default ChargingStations;
