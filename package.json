@@ -18,7 +18,11 @@
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "dscan": "node ./sonarqube/sonarscan.js"
+    "coverage": "react-scripts test --coverage",
+    "test-sonar": "react-scripts test --watchAll=false --coverage --testResultsProcessor jest-sonar-reporter",
+    "dscan": "node ./sonarqube/sonarscan.js",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
